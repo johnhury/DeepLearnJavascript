@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>迭代（非破坏性地）——监测方法</title>
+	<style>
+		body,pre{
+			line-height: 2;
+			color: #333;
+			font-size: 14px;
+			font-family: microsoft yahei;
+		}
+	</style>
+</head>
+<body>
+<pre>
+	迭代方法使用一个函数遍历数组。
+	1.监测方法（examination methods）主要观察数组的内容；
+	2.转化方法（transformation methods) 从接受者获得新数组；
+	3.归纳方法（reduction methods)基于接受者的元素计算出结果。
+
+	一、监测方法
+		描述：arr.examinationMethod(callback,thisValue?)
+		> callback 是他的第一个参数，一个调用函数，根据检测方法，回调函数返回布尔值或什么都不返回，函数签名如下：
+		签名：function callback(element,index,array)
+		element 是提供回掉函数callback处理的数组元素，index是元素的索引，array是调用examinationMethod的数组。
+		> thisValue 可以配置callback 内的this。
+		监测方法签名方法：
+		Array.prototype.forEach(callback,thisValue?)
+
+</pre>
+	<script>
+		var arr1 = [32,23,'1',2,5,7,11,42,1,45,2,4];
+		arr1.forEach(function(ele){
+			console.log(ele);
+		});
+		
+	</script>
+</body>
+</html>

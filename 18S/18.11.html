@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>值的查找</title>
+	<style>
+		body,pre{
+			line-height: 2;
+			color: #333;
+			font-size: 14px;
+			font-family: microsoft yahei;
+		}
+	</style>
+</head>
+<body>
+<pre>
+	值的查找（非破坏性地） indexOf
+	语法：Array.prototype.indexOf(searchValue,startIndex);
+	解释：从数组的startIndex开始，查找searchValue。这个方法返回第一次出现searchValue的索引，如果没有找到，则返回-1，如果startIndex是负值，则该值加上数组长度；如果缺少startIndex，则查找整个数组。
+	注意：查找使用严格相等（===） 和严格不等（！==）
+	Array.prototype.lastIndexOf(searchElement,startIndex?);
+	从数组的startIndex开始，反向查找searchElement
+</pre>
+	<script>
+		var arr1 = [32,23,'1',2,5,7,11,42,1,45,2,4];
+		var ele = arr1.indexOf('1',5);
+		console.log(ele);
+		var ele2 = arr1.lastIndexOf(4,11);
+		console.log(ele2);
+	</script>
+</body>
+</html>

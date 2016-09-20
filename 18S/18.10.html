@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,pre{
+			line-height: 2;
+			color: #333;
+			font-size: 14px;
+			font-family: microsoft yahei;
+		}
+	</style>
+</head>
+<body>
+<pre>
+	18.10数组合并，切分，和连接（非破坏性地）
+
+	concat:
+	语法：Array.prototype.concat(arr1?,arr2?, ...);
+	解释：创建一个新数组，其中包含接受者的所有元素，其次是arr1的所有元素，以此类推。如果其中一个不是数组，则它作为元素添加到结果中。
+
+	slice:
+	语法：Array.prototype.slice(begin?,end?);
+	解释：从begin开始到end结束（不包括end）截取并复制到新数组中
+	缺少end 则默认end为数组的长度
+	缺少begin和end则截取整个数组
+	如果任意一个为负值，则该值加上数组长度值
+
+	join:
+	语法：Array.prototype.join(separator);
+	解释：通过对所有数组元素应用toString()方法创建字符串，并用separator连接字符串，如果缺少separator 默认用 ',':
+</pre>
+	<script>
+		// concat
+		// var a = 'originStr';
+		// var a2 = [3,'e','u',null];
+		// console.log(Array.prototype.concat(a,a2));
+		// console.log(a); //原始数据不受影响
+		// 
+		// slice
+		// var arr1 = ['h','e','l','l','o',' ','w','o','r','l','d'];
+		// console.log(arr1.slice(2,4)); //不包括终点值
+		// console.log(arr1.slice(4)); //不包括终点值
+		// console.log(arr1.slice(-2,-1)); //不包括终点值
+		// console.log(arr1.slice()); //不包括终点值
+		// console.log(arr1); //原始数据不受影响
+		// 
+		// join
+		var arr3 = ['f',2,null,'wow',undefined];
+		arr3[100]='';
+		console.log(arr3.join('/'));
+		console.log(arr3.join());
+	</script>
+</body>
+</html>

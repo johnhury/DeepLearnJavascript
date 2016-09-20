@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>操作符 in 与 索引</title>
+	<style>
+		body,pre{
+			line-height: 2;
+			color: #333;
+			font-size: 14px;
+			font-family: microsoft yahei;
+		}
+	</style>
+</head>
+<body>
+	<pre>
+		操作符 in 可以检测对象是否具有某个给定键的属性，也可以判断一个数组是否存在指定的索引
+	</pre>
+</body>
+<script>
+	var ar1=['you','qie','ke','nao'];
+	ar1['name']='hello';
+	console.log('name' in ar1); //true
+	console.log(0 in ar1); //true
+	console.log('you' in ar1) //false
+
+	var mulitarr1 = [[[1,'1-1','1-2'],2,3],[4,5,6],[7,8,9]]
+</script>
+</html>

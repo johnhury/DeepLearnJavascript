@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组索引</title>
+	<style>
+		body,pre{
+			line-height: 2;
+			color: #333;
+			font-size: 14px;
+			font-family: microsoft yahei;
+		}
+	</style>
+</head>
+<body>
+	<pre>
+		使用数组索引时注意索引范围 大于等于0 小于 2的32次幂减1。
+		在这个范围外发现的索引都会被当作普通的索引键（字符串）。他们不会作为数组的元素呈现，并且不会影响数组的长度！
+		> var a = [];
+		> a[-1] = 'hei';
+		> arr
+		[]
+		> a['-1']
+		'a'
+	</pre>
+</body>
+</html>

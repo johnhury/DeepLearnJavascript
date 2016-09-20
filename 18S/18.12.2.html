@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>迭代（非破坏性地）--转化方法</title>
+	<style>
+		body,pre{
+			line-height: 2;
+			color: #333;
+			font-size: 14px;
+			font-family: microsoft yahei;
+		}
+	</style>
+</head>
+<body>
+<pre>
+	迭代方法使用一个函数遍历数组。
+	1.监测方法（examination methods）主要观察数组的内容；
+	2.转化方法（transformation methods) 从接受者获得新数组；
+	3.归纳方法（reduction methods)基于接受者的元素计算出结果。
+
+	二、转化方法
+		描述：转化方法接收一个输入数组，产生一个输出数组，回调函数控制如何产生输出。
+		
+		签名：function callback(element,index,array)
+		element 是提供回掉函数callback处理的数组元素，index是元素的索引，array是调用transformationMethod的数组。
+		> thisValue 可以配置callback 内的this。
+		监测方法签名方法：
+		Array.prototype.map(callback,thisValue?)
+		Array.prototype.filter(callback,thisValue?)
+
+
+</pre>
+	<script>
+		var arr1 = [32,23,'1',2,5,7,11,42,1,45,2,'a'];
+		var newarr1 = arr1.map(function(ele){return ele+ele;});
+		console.log(newarr1);
+		var newarr2 = arr1.filter(function(index) {
+			return typeof index ==='number';
+		});
+		console.log(newarr2);
+	</script>
+</body>
+</html>
